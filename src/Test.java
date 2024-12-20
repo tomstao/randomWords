@@ -14,4 +14,13 @@ public class Test extends Main{
         }
 
     }
+
+    public static void testWordWithArrays()
+    {
+        WordsWithArrays wwa = new WordsWithArrays();
+        wwa.readWords();
+        System.out.println("Number of words read: " + wwa.get_size_mywords());
+        int uniqueWords = wwa.numberOfUniqueWords();
+        System.out.println("Array count: " + uniqueWords);
+    }
 }
