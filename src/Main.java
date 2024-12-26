@@ -4,9 +4,9 @@ public class Main {
         //Test.testWf();
         //Test.testWordWithArrays();
         WordFrequencies wf = new WordFrequencies();
-        wf.testerWF();
+        //wf.testerWF();
         CharactersInPlay ch = new CharactersInPlay();
-        //ch.tester();
+        ch.tester();
 
     }
 }

@@ -1,14 +1,17 @@
 import edu.duke.FileResource;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CharactersInPlay {
     private ArrayList<String> characters;
     private ArrayList<Integer> lines;
+    private HashMap<String, Integer> characterLines;
 
     public CharactersInPlay() {
         characters = new ArrayList<>();
         lines = new ArrayList<>();
+        characterLines = new HashMap<>();
     }
 
     public void update(String person) {
@@ -22,12 +25,14 @@ public class CharactersInPlay {
     }
 
     public void charactersWithNumParts(int num1, int num2) {
-
+        int count = 0;
         for(int i = 0; i < characters.size(); i++) {
             if (lines.get(i) <= num2 && lines.get(i) >= num1) {
+                count++;
                 System.out.println(characters.get(i) + " has " + lines.get(i));
             }
         }
+        System.out.println("Characters with lines between " + num1 + " and " + num2 + " are: " + count);
     }
 
 
@@ -56,6 +61,7 @@ public class CharactersInPlay {
                 index = i;
             }
         }
+
         System.out.println("Character has the most lines: " + characters.get(index) + " of " + mostLines);
     }
 
